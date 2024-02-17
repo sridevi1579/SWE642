@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Department Survey</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #006633; /* Green background */
+      color: #FFCC33; /* Yellow text color */
+    }
+    h1 {
+      color: #FFCC33; /* Yellow text color */
+    }
+    .required::after {
+      content: "*";
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="text-center">
+      <img src="https://www.sports-management-degrees.com/wp-content/uploads/2018/08/George-Mason-University-Logo.jpg" style="width:100px;height:100px;">
+    </div>
+    <h1 class="text-center mb-4">CS Department Survey</h1>
+    <form id="surveyForm">
+      <div class="form-group">
+        <label for="username" class="required">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" required autofocus>
+      </div>
+      <div class="form-group">
+        <label for="streetAddress" class="required">Street Address:</label>
+        <input type="text" class="form-control" id="streetAddress" name="streetAddress" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="city" class="required">City:</label>
+          <input type="text" class="form-control" id="city" name="city" required>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="state" class="required">State:</label>
+          <input type="text" class="form-control" id="state" name="state" required>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="zip" class="required">Zip:</label>
+          <input type="text" class="form-control" id="zip" name="zip" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="telephone" class="required">Telephone Number:</label>
+        <input type="tel" class="form-control" id="telephone" name="telephone" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="required">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="url" class="required">URL:</label>
+        <input type="url" class="form-control" id="url" name="url" required>
+      </div>
+      <div class="form-group">
+        <label for="surveyDate" class="required">Date of Survey:</label>
+        <input type="date" class="form-control" id="surveyDate" name="surveyDate" required>
+      </div>
+      <div class="form-group">
+        <label class="required">What did you like most about the campus?</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="students" name="likes" value="students">
+          <label class="form-check-label" for="students">Students</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="location" name="likes" value="location">
+          <label class="form-check-label" for="location">Location</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="campus" name="likes" value="campus">
+          <label class="form-check-label" for="campus">Campus</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="atmosphere" name="likes" value="atmosphere">
+          <label class="form-check-label" for="atmosphere">Atmosphere</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="dormRooms" name="likes" value="dormRooms">
+          <label class="form-check-label" for="dormRooms">Dorm Rooms</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="sports" name="likes" value="sports">
+          <label class="form-check-label" for="sports">Sports</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="required">How did you become interested in the university?</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="interest" id="friends" value="friends">
+          <label class="form-check-label" for="friends">Friends</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="interest" id="television" value="television">
+          <label class="form-check-label" for="television">Television</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="interest" id="internet" value="internet">
+          <label class="form-check-label" for="internet">Internet</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="interest" id="other" value="other">
+          <label class="form-check-label" for="other">Other</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comments">Additional Comments:</label>
+        <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+      </div>
+      
+         <div class="form-group">
+        <label for="graduationMonth" class="required">High-School Graduation Month:</label>
+        <input type="text" class="form-control" id="graduationMonth" name="graduationMonth" list="months" required>
+        <datalist id="months">
+          <option value="January">
+          <option value="February">
+          <option value="March">
+          <option value="April">
+          <option value="May">
+          <option value="June">
+          <option value="July">
+          <option value="August">
+          <option value="September">
+          <option value="October">
+          <option value="November">
+          <option value="December">
+        </datalist>
+      </div>
+      <div class="form-group">
+        <label for="graduationYear" class="required">High-School Graduation Year:</label>
+        <input type="text" class="form-control" id="graduationYear" name="graduationYear" required>
+      </div>
+      
+      
+      <div class="form-group">
+        <label for="recommendation" class="required">Likelihood of recommending this school:</label>
+        <select class="form-control" id="recommendation" name="recommendation" required>
+          <option>Very Likely</option>
+          <option>Likely</option>
+          <option>Unlikely</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("username").focus();
+    });
+  </script>
+</body>
+</html>
+
